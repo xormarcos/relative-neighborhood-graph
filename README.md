@@ -1,7 +1,7 @@
 # RelativeNeighborhoodGraph
 A simple repository for creating Relative Neighborhood Graphs in C#\
 https://en.wikipedia.org/wiki/Relative_neighborhood_graph <br/>
-It might not be super optimized, but it works\
+It might not be super optimized, but it works
 
 ## Usage
 Call RelativeNeighborhoodGraphGenerator.Generate() and pass the list of points you which to connect\ 
