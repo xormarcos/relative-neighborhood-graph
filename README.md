@@ -1,5 +1,5 @@
 # RelativeNeighborhoodGraph
-A simple repository for creating Relative Neighborhood Graphs in C#<br/>
+A class library for creating Relative Neighborhood Graphs in C#<br/>
 https://en.wikipedia.org/wiki/Relative_neighborhood_graph<br/>
 It might not be super optimized, but it works
 
