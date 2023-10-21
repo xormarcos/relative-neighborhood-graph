@@ -1,6 +1,6 @@
 # RelativeNeighborhoodGraph
 A simple repository for creating Relative Neighborhood Graphs in C#\
-https://en.wikipedia.org/wiki/Relative_neighborhood_graph\
+https://en.wikipedia.org/wiki/Relative_neighborhood_graph <br/>
 It might not be super optimized, but it works\
 
 ## Usage
