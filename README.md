@@ -11,6 +11,8 @@ dotnet add package RelativeNeighborhoodGraph
 ## Usage
 
 ```
+using RelativeNeighborhoodGraph;
+
 List<Vector2> points = new() 
 {
     new Vector2(0,1),
