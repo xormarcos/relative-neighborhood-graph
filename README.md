@@ -4,7 +4,9 @@ https://en.wikipedia.org/wiki/Relative_neighborhood_graph<br/>
 
 ## Install
 
-```dotnet add package RelativeNeighborhoodGraph```
+```
+dotnet add package RelativeNeighborhoodGraph
+```
 
 ## Usage
 
