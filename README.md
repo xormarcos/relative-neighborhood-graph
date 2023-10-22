@@ -10,7 +10,7 @@ dotnet add package RelativeNeighborhoodGraph
 
 ## Usage
 
-```
+```csharp
 using RelativeNeighborhoodGraph;
 
 List<Vector2> points = new() 
