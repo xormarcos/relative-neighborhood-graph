@@ -3,6 +3,15 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <PackageId>RelativeNeighborhoodGraph</PackageId>
+    <Version>1.0.2</Version>
+    <Authors>Marcos Gomes</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/xormarcos/relative-neighborhood-graph</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+      <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
