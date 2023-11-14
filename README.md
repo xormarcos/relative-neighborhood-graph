@@ -16,8 +16,6 @@ using System.Collections.Generic;
 using System.Numerics;
 using RelativeNeighborhoodGraph;
 
-
-
 List<Vector2> points = new() 
 {
     new Vector2(0,1),
