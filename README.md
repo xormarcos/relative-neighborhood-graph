@@ -11,7 +11,12 @@ dotnet add package RelativeNeighborhoodGraph
 ## Usage
 
 ```csharp
+using System;
+using System.Collections.Generic;
+using System.Numerics;
 using RelativeNeighborhoodGraph;
+
+
 
 List<Vector2> points = new() 
 {
