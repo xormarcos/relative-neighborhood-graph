@@ -10,7 +10,7 @@ public static class RelativeNeighborhoodGraphGenerator
 
     public static List<Tuple<Vector2, Vector2>> Generate(IEnumerable<Vector2> points)
     {
-        List<Tuple<Vector2, Vector2>> result = new List<Tuple<Vector2, Vector2>>();
+        List<Tuple<Vector2, Vector2>> result = new();
 
         foreach (Vector2 point in points)
         {
