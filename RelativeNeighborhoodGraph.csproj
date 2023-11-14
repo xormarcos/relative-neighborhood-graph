@@ -4,14 +4,15 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <PackageId>RelativeNeighborhoodGraph</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.4</Version>
     <Authors>Marcos Gomes</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/xormarcos/relative-neighborhood-graph</RepositoryUrl>
+    <PackageReadmeFile>NUGET.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
-      <None Include="README.md" Pack="true" PackagePath="\"/>
+      <None Include="NUGET.md" Pack="true" PackagePath="\"/>
+      <None Include="LICENSE" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
