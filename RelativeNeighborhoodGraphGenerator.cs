@@ -6,7 +6,7 @@ namespace RelativeNeighborhoodGraph;
 
 public static class RelativeNeighborhoodGraphGenerator
 {
-    private static Dictionary<Tuple<Vector2, Vector2>, float> cachedDistances = new();
+    private static Dictionary<string, float> cachedDistances = new();
 
     public static List<Tuple<Vector2, Vector2>> Generate(IEnumerable<Vector2> points)
     {
@@ -53,7 +53,7 @@ public static class RelativeNeighborhoodGraphGenerator
 
     private static float GetDistance(Vector2 point1, Vector2 point2)
     {
-        Tuple<Vector2, Vector2> key = new Tuple<Vector2, Vector2>(point1, point2);
+        string key = point1.ToString() + "/" + point2.ToString();
 
         float distance;
 
@@ -62,7 +62,9 @@ public static class RelativeNeighborhoodGraphGenerator
             return distance;
         }
 
-        if (cachedDistances.TryGetValue(new Tuple<Vector2, Vector2>(point2, point1), out distance))
+        string alernativeKey = point2.ToString() + "/" + point1.ToString();
+
+        if (cachedDistances.TryGetValue(alernativeKey, out distance))
         {
             return distance;
         }
