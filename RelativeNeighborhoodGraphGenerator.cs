@@ -1,51 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Numerics;
-using System.Threading.Tasks;
 
 namespace RelativeNeighborhoodGraph;
 
 public static class RelativeNeighborhoodGraphGenerator
 {
-    public static List<Tuple<Vector2, Vector2>> Generate(IEnumerable<Vector2> points)
+    public static IEnumerable<Tuple<Vector2, Vector2>> Generate(IEnumerable<Vector2> points)
     {
-        List<Tuple<Vector2, Vector2>> result = new();
+        HashSet<Tuple<Vector2, Vector2>> result = new();
 
-        Parallel.ForEach(points, point =>
+        foreach (Vector2 point in points)
         {
-            Parallel.ForEach(points, point2 =>
+            foreach (Vector2 point2 in points)
             {
-                if (point == point2 || result.Contains(new Tuple<Vector2, Vector2>(point2, point)))
+                if (point.Equals(point2) || result.Contains(new Tuple<Vector2, Vector2>(point2, point)))
                 {
-                    return;
+                    continue;
                 }
 
-                float distance = Vector2.DistanceSquared(point, point2);
+                double distance = Vector2.DistanceSquared(point, point2);
                 bool closest = true;
 
-                Parallel.ForEach(points, (point3, state) =>
+                foreach (Vector2 point3 in points)
                 {
-                    if (point3 == point || point3 == point2)
+                    if (point3.Equals(point) || point3.Equals(point2))
                     {
-                        return;
+                        continue;
                     }
 
-                    float distance2 = Vector2.DistanceSquared(point3, point);
-                    float distance3 = Vector2.DistanceSquared(point3, point2);
+                    double distance2 = Vector2.DistanceSquared(point3, point);
+                    double distance3 = Vector2.DistanceSquared(point3, point2);
 
                     if (distance > distance2 && distance > distance3)
                     {
                         closest = false;
-                        state.Break();
+                        break;
                     }
-                });
+                }
 
                 if (closest)
                 {
                     result.Add(new Tuple<Vector2, Vector2>(point, point2));
                 }
-            });
-        });
+            }
+        }
 
         return result;
     }
